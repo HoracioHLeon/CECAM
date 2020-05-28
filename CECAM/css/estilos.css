@@ -1,0 +1,215 @@
+/*
+Reglas para CSS
+
+1) Primero se definen los estilos para ETIQUETAS html, por ejemplo: header, footer, div, a, p, etc.
+
+2) Segundo se definen los estilos para IDENTIFICADORES (id), los id son elementos unicos en el html, en el CSS se declara con el simbolo de # ejemplo: #nombre-id(estilos) y en el html se llaman mediante el atributo id ejemplo <div id="publicidad"></div>
+
+3) Tercero se definen los estilos para las CLASES (class), las clases son elementos que se pueden repetir n veces en html, en el CSS se declaran con el simbolo de . ejemplo: .nombre-class (estilos)
+y en el html se llaman ediante el atributo class, ejemplo <div class="borde-logo"></div>
+
+4) Cuarto todos los estilos se ordenan conforme van apareciendo en la disposicion del html,tiendo encuenta la prioridad anterior, es decir, primero etiquetas html, luego id y al final class
+
+5) Quinto los atributos se declaran de la siguiente forma: (atributo1:valor1; atributo2:valor2 ...;)
+
+6) Sexto todos los atributos se ordenan alfabeticamente, por ejemplo width, color, display, entonces el orden seria: primero color, luego display y al final width.
+
+7) Septimo si tenemos estilos para las etiquetas html y/o body, estos estilos son los primeros en definirse.
+
+8) Octavo en el body debemos declarar un tamaño de fuente global
+
+9) Noveno si tenemos estilos para resetear elementos html, estos iran antes de cualquier estilo
+*/
+
+*{
+	border:0;
+	margin: 0;
+	padding: 0;
+}
+/*	
+article, figcaption, figure, footer, header, hgroup, nav, section{
+	display: block;
+}*/
+
+
+
+
+figcaption{
+	font-size: 0.85em;
+	padding: 0.25em;
+	text-align: center;
+}
+img, video{
+	max-width: 100%;
+}
+
+
+section#contenedor{
+	background: 212121;
+	margin: 0 auto;
+	max-width: 90% auto;
+	text-align: center;
+}
+
+
+h2{
+  color:#003449;
+  max-width: 100%;
+}
+section#principal, aside{
+	background: #FFFFFF;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0.25em auto;
+	max-width: 960px auto;
+	padding:0.25em;
+	vertical-align: top;
+	width: 65% auto;
+}
+
+}
+article#galeria-inicio{
+	border-radius: 0.5em;
+	margin: 0.5em;
+	padding: 0.25em;
+	text-align: left;
+	width: 95%
+}
+
+aside{
+	width: 30% auto;
+}
+
+aside img{
+	border-radius: 0.5em;
+}
+
+
+footer{
+	color:#232323;
+	/*font-size: 0.85em;*/
+	padding: 0.75em 0;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+    color:black;
+}
+
+.fade{
+	-ms-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+	opacity: 1;
+	filter: alpha(opacity=10);
+}
+
+.fade:hover{
+	-ms-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	opacity: 0.7;
+	filter: alpha(opacity=7);
+}
+aside#divisor{
+	width: 100%;
+}
+
+
+@media only screen and (max-width: 800px) { 
+.ocultar-en-movil { 
+     
+ 	display: none !important;
+}
+}
+
+@media only screen and (min-width: 1200px){
+section#principal, aside{
+	background: #FFFFFF;
+	border-radius: 0.5em;
+	display: inline-block;
+	margin: 0.25em auto;
+	max-width: 960px auto;
+	padding:0.25em;
+	vertical-align: top;
+	width: 65%;
+}
+aside{
+	width: 30%;
+}
+}
+
+
+
+
+.flex-caption { /*imagen*/
+  width: 96%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+#vertical-bar { /*division*/
+
+        border-left: 1px solid #000;
+        width:1px;
+        height:500px;
+    }
+
+#evento-container{
+    padding: 10px;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial;
+    background-image: linear-gradient(#fff, #d3d3d3);
+}
+#evento-container>div{
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#frase-container{
+    padding: 10px;
+    width: 648px;
+    height: 147px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial;
+    position: absolute;
+    top:30px;
+    left:650px;
+    background-image: linear-gradient(#fff,#fff);
+}
+#final-container{
+    padding: 10px;
+    width: 648px;
+    height: 147px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial;
+    position: absolute;
+    top:130px;
+    left:50px;
+    background-image: linear-gradient(#fff,#d3d3d3);
+}
